@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>即時尋燈</title>
+    <style>
+        * {
+            font-family: 微軟正黑體;
+            position: relative;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .real {
+            border: solid 1px red;
+            width: 90%;
+            /* display: inline-block; */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+
+            color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+
+            border: solid 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            margin: auto;
+            top: 5%;
+            /* transform: translateY(-50%); */
+        }
+
+        .realTime {
+            margin: 30px  0 0;
+            width: 90%;
+        }
+
+        .tittle {
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+
+        .bg-dark {
+
+            background: #fff !important;
+        }
+
+        .nav-link {
+            padding-right: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+
+
+
+        .design-work {
+            margin-top: 120px;
+            background-color: #bf9d6d;
+            /* background-image: url(../../asset/img/new_bgc.jpg); */
+            width: 100%;
+            /* margin:20px auto; */
+            padding: 5px 10px 5px;
+            color: #fff;
+        }
+
+        .design-box img {
+            width: 180px;
+            margin: 20px 0;
+        }
+
+
+
+
+        .design-work {
+            text-align: center;
+        }
+
+        a span{
+            color: rgb(94, 91, 91);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand " href="https://www.wenhsuan.com.tw/">
+            <span>文玄光明燈</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">線上點燈<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">登入付款</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="real">
+        <img class="realTime" src="http://220.133.137.174:8080/ipcam/mjpeg.cgi">
+        <br><br>
+        <div class="tittle">藥師燈 即時影像</div>
+        <br>
+    </div>
+
+
+    <section class="design-work">
+        <div class="design-box">
+            <img src="footerLogo.png" alt="">
+            <p>407台中市西屯區中清路二段1335號<br>
+                ☏ 04-24252423<br>
+                © 2021 wenhsuan Taiwan Inc.
+            </p><br>
+            <!-- <div class="btn"><span class="arrow">➥&nbsp;&nbsp;</span><a href="https://www.behance.net/leon841208a7de" target="_blank">My Behance</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+        </div>
+    </section>
+
+</body>
+
+</html>
