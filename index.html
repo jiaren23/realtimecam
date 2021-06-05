@@ -125,8 +125,9 @@
         <img class="realTime" src="http://220.133.137.174:8080/ipcam/mjpeg.cgi">
         <br><br>
         <div class="tittle">藥師燈 即時影像</div>
-        <div class="tittle2"></div>
-        <a href=”javascript:window.history.go(-1)” >按此 >> 回點燈頁面</a>
+ 
+        <a href="https://bless.mytemples.com/site/index.php"; >按此 >> 回點燈頁面</a>
+        <div id="div1"></div>
      
         
         <br>
@@ -147,20 +148,23 @@
     <script>
 
 
-        function closewin() {
-            self.opener = null;
-            self.close();
-        }
-        function clock() {
-            i = i - 1
-            document.querySelector('.tittle2').innerHTML = "本尋燈視窗將在" + i + "秒後自動關閉!";
-            // document.title = "本尋燈視窗將在" + i + "秒後回點燈頁面!";
-            if (i > 0) setTimeout("clock(); ", 1000);
-            else closewin();
-        }
-        var i = 10;
-        clock();
-        //–>F
+var count = 10;
+	//寫一個方法，顯示倒數秒數  數到0後跳轉頁面  
+	function countDown(){
+		//將count顯示在div中
+		document.getElementById("div1").innerHTML=  "本尋燈視窗將在" + count + "秒後回到點燈頁面!";
+		//沒執行一次，count減1
+		count -= 1;
+		//count=0時，跳轉頁面
+		if(count==0){
+			location.href="https://bless.mytemples.com/site/index.php";
+                        //window.location.href="index.html";
+		}
+		//每秒執行一次,showTime()
+		setTimeout("countDown()",1000);
+	}
+	//執行countDown方法
+	countDown();
 
       
     </script>
