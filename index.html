@@ -50,7 +50,7 @@
         }
 
         .realTime {
-            margin: 30px  0 0;
+            margin: 30px 0 0;
             width: 90%;
         }
 
@@ -95,11 +95,9 @@
             text-align: center;
         }
 
-        a span{
+        a span {
             color: rgb(94, 91, 91);
         }
-
-        
     </style>
 </head>
 
@@ -127,6 +125,10 @@
         <img class="realTime" src="http://220.133.137.174:8080/ipcam/mjpeg.cgi">
         <br><br>
         <div class="tittle">藥師燈 即時影像</div>
+        <div class="tittle2"></div>
+        <a href=”javascript:window.close()” >按此 >> 自行關閉視窗</a>
+     
+        
         <br>
     </div>
 
@@ -141,6 +143,27 @@
             <!-- <div class="btn"><span class="arrow">➥&nbsp;&nbsp;</span><a href="https://www.behance.net/leon841208a7de" target="_blank">My Behance</a>&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
         </div>
     </section>
+
+    <script>
+
+
+        function closewin() {
+            self.opener = null;
+            self.close();
+        }
+        function clock() {
+            i = i - 1
+            document.querySelector('.tittle2').innerHTML = "本尋燈視窗將在" + i + "秒後自動關閉!";
+            // document.title = "本尋燈視窗將在" + i + "秒後自動關閉!";
+            if (i > 0) setTimeout("clock(); ", 1000);
+            else closewin();
+        }
+        var i = 100;
+        clock();
+        //–>F
+
+      
+    </script>
 
 </body>
 
