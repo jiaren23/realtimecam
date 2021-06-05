@@ -126,7 +126,7 @@
         <br><br>
         <div class="tittle">藥師燈 即時影像</div>
         <div class="tittle2"></div>
-        <a href=”javascript:window.close()” >按此 >> 自行關閉視窗</a>
+        <a href=”javascript:window.history.go(-1)” >按此 >> 回點燈頁面</a>
      
         
         <br>
@@ -154,11 +154,11 @@
         function clock() {
             i = i - 1
             document.querySelector('.tittle2').innerHTML = "本尋燈視窗將在" + i + "秒後自動關閉!";
-            // document.title = "本尋燈視窗將在" + i + "秒後自動關閉!";
+            // document.title = "本尋燈視窗將在" + i + "秒後回點燈頁面!";
             if (i > 0) setTimeout("clock(); ", 1000);
             else closewin();
         }
-        var i = 100;
+        var i = 10;
         clock();
         //–>F
 
